@@ -19,7 +19,7 @@
       "category": "opengl.network.map"
     }
   },
-  "main": "src/electron.js",
+  "main": "build/electron.js",
   "scripts": {
     "start": "nf start",
     "reactStart": "react-scripts start",

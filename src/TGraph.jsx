@@ -120,19 +120,19 @@ class TGraph extends Component {
   }
 
   // start animation
-  start = () => {
+  start() {
     if(!this.frameId) {
       this.frameId = requestAnimationFrame(this.animate);
     }
   }
 
   // stop animation
-  stop = () => {
+  stop() {
     cancelAnimationFrame(this.frameId);
   }
 
   // animate cubes
-  animate = () => {
+  animate() {
     this.cubes.map((v, idx) => {
       this.generateCubeAnimations(v, idx);
     });
@@ -146,7 +146,7 @@ class TGraph extends Component {
   }
 
   // begin rendering
-  renderScene = () => {
+  renderScene() {
     this.renderer.render(this.scene, this.camera)
   }
 
@@ -197,7 +197,6 @@ class TGraph extends Component {
   }
 
   cubeBounce(cube) {
-    let bcolor; // bounce color change
 
     if (cube.position.x > (this.environment.x - cube.size)) {
       cube.position.x = 2 * (this.environment.x - cube.size) - cube.position.x
@@ -226,7 +225,7 @@ class TGraph extends Component {
     }
   }
 
-  generateCubeAnimations(cube, idx) {
+  generateCubeAnimations(cube) {
     this.cubeMovement(cube);
     this.cubeBounce(cube);
     // console.log(cube.material);
@@ -250,7 +249,6 @@ class TGraph extends Component {
       <div
         tabIndex="0"
         className='Stage'
-        onKeyDown={e => console.log(e)}
         ref={(mount) => { this.mount = mount }}
       />
     );
