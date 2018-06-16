@@ -1,0 +1,51 @@
+{
+  "name": "nwalk",
+  "version": "0.1.0",
+  "description": "local are network map creation using walk sequencing",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "randomcolor": "^0.5.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "reactstrap": "^6.1.0",
+    "three": "^0.93.0"
+  },
+  "build": {
+    "appId": "nwalk",
+    "mac": {
+      "category": "opengl.network.map"
+    }
+  },
+  "main": "src/electron.js",
+  "scripts": {
+    "start": "nf start",
+    "reactStart": "react-scripts start",
+    "parcel": "parcel -p 3000 public/index_parcel.html",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "nf start",
+    "pack": "electron-builder --dir ./src/electron.js",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron": "^2.0.2",
+    "electron-builder": "^20.15.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-watch": "^3.1.5",
+    "foreman": "^3.0.0",
+    "jester": "^0.2.3",
+    "parcel-bundler": "^1.9.0",
+    "three-orbitcontrols": "^2.1.2"
+  },
+  "author": "Vincent Castro <vincentcastro@gmail.com>",
+  "license": "MIT"
+}
